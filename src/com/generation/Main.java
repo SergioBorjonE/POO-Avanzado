@@ -4,12 +4,35 @@ import com.generation.banco.CuentaBancaria;
 import com.generation.ejercicio.Person;
 
 public class Main {
+    public static float numerador=10;
+    public static int denominador=0;
+    public static float division;
 
     public static void main(String[] args) {
-        Person person= new Person("Santiago", 33, "102045455");
+
+        //Bloques try y catch
+        try{
+            System.out.println("Antes de hacer la division");
+            division=numerador/denominador;
+        } catch (ArithmeticException ex){
+            division=0;
+            System.out.println("Acabas de obtener un gran error " +ex.getMessage());
+        }catch(NullPointerException ex){
+            division=0;
+            System.out.println("Acabas de obtener un gran error " +ex.getMessage());
+        }finally {
+            System.out.println(division);
+            System.out.println("Después de la division");
+        }
+
+
+
+
+        //Ejercicio de encapsulamiento
+        /*Person person= new Person("Santiago", 33, "102045455");
         System.out.println( "Name: " + person.getName());
         System.out.println( "Age: "+ person.getAge());
-        System.out.println( "Id: " +  person.getId());
+        System.out.println( "Id: " +  person.getId());*/
 
 
         /*CuentaBancaria cuenta=new CuentaBancaria();
